@@ -4,16 +4,19 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { useState } from "react";
 import DataFetch from "./data/DataFetch";
+import Pokelist from "./components/PokeList/PokeList";
 function App() {
   const [pokedata, setPokedata] = useState([]);
+  console.log("appjsx", pokedata);
   return (
     <>
-      <FetchContext.Provider>
+      <FetchContext.Provider value={{ pokedata, setPokedata }}>
         <DataFetch />
         <Header />
-        <Routes>
+        <Pokelist />
+        {/* <Routes>
           <Route />
-        </Routes>
+        </Routes> */}
       </FetchContext.Provider>
     </>
   );
