@@ -1,5 +1,6 @@
 import { useEffect, useContext } from "react";
 import { FetchContext, PokeDetailsContext } from "../../context/Context";
+import PokeItem from "../PokeItem/PokeItem";
 
 const Pokelist = () => {
   const fetchedData = useContext(FetchContext);
@@ -31,14 +32,20 @@ const Pokelist = () => {
       <h1>PokeList</h1>
       {pokeDetailsData.pokedetaildata.map((pokeInfos) => {
         return (
-          <div key={pokeInfos.id}>
-            <h2>{pokeInfos.name}</h2>
-            <img src={pokeInfos.sprites.other.home.front_default} alt="" />
-          </div>
+        <PokeItem
+        key={pokeInfos.id}
+        name={pokeInfos.name}
+        img={pokeInfos.sprites.other.home.front_default}
+        id={pokeInfos.id}
+        index={pokeInfos.game_index}
+        types={pokeInfos.types}
+      />
         )
+        
       })}
     </div>
   );
 };
 
 export default Pokelist;
+
