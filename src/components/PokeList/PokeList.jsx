@@ -1,5 +1,5 @@
 const Pokelist = () => {
-    return (  );
-}
- 
+  return <></>;
+};
+
 export default Pokelist;

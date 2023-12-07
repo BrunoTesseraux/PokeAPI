@@ -1,5 +1,5 @@
 const Searchbutton = () => {
-    return (  );
-}
- 
+  return <></>;
+};
+
 export default Searchbutton;

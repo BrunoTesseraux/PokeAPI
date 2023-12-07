@@ -1,5 +1,5 @@
 const PokeItem = () => {
-    return (  );
-}
- 
+  return <></>;
+};
+
 export default PokeItem;

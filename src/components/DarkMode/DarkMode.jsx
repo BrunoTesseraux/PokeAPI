@@ -1,5 +1,5 @@
 const DarkMode = () => {
-    return (  );
-}
- 
+  return <></>;
+};
+
 export default DarkMode;
