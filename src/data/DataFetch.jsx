@@ -4,7 +4,7 @@ import { useContext } from "react";
 
 const DataFetch = () => {
   const fetchState = useContext(FetchContext);
-  //   console.log(fetchState);
+  // console.log(fetchState);
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1292")
       .then((response) => response.json())
