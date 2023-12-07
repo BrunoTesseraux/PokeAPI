@@ -1,5 +1,6 @@
 const Typefilter = () => {
-  return <></>;
+  return <>
+  </>;
 };
 
 export default Typefilter;

@@ -31,7 +31,7 @@ const Pokelist = () => {
       <h1>PokeList</h1>
       {pokeDetailsData.pokedetaildata.map((pokeInfos) => {
         return (
-          <div>
+          <div key={pokeInfos.id}>
             <h2>{pokeInfos.name}</h2>
             <img src={pokeInfos.sprites.other.home.front_default} alt="" />
           </div>
