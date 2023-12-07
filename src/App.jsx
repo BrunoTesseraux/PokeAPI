@@ -9,7 +9,7 @@ function App() {
   const [pokedata, setPokedata] = useState([]);
   const [pokedetaildata, setPokedetaildata] = useState([]);
   // console.log("appjsx", pokedata);
-  // console.log(pokedetaildata);
+
   return (
     <FetchContext.Provider value={{ pokedata, setPokedata }}>
       <PokeDetailsContext.Provider
