@@ -1,5 +1,6 @@
 const PokeDetails = () => {
-  return <></>;
+  return <>
+  </>;
 };
 
 export default PokeDetails;

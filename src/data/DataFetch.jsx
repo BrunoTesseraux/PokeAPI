@@ -6,7 +6,7 @@ const DataFetch = () => {
   const fetchState = useContext(FetchContext);
   // console.log(fetchState);
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1292")
+    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=500")
       .then((response) => response.json())
       .then((data) => fetchState.setPokedata(data.results));
   }, []);
