@@ -1,6 +1,8 @@
 import { useEffect, useContext } from "react";
 import { FetchContext, PokeDetailsContext } from "../../context/Context";
 import PokeItem from "../PokeItem/PokeItem";
+import "./PokeList.scss"
+
 
 const Pokelist = () => {
   const fetchedData = useContext(FetchContext);
@@ -28,8 +30,7 @@ const Pokelist = () => {
   }, [fetchedData.pokedata, pokeDetailsData.setPokedetaildata]);
 
   return (
-    <div>
-      <h1>PokeList</h1>
+    <section className="grid">
       {pokeDetailsData.pokedetaildata.map((pokeInfos) => {
         return (
         <PokeItem
@@ -41,9 +42,8 @@ const Pokelist = () => {
         types={pokeInfos.types}
       />
         )
-        
       })}
-    </div>
+    </section>
   );
 };
 
