@@ -15,7 +15,7 @@ const PokeItem = (props) => {
         </div>
           <div>
           <h2>{props.name.toUpperCase()}</h2>
-          <h3># {props.id.toString().padStart(3,"0")}</h3>
+          <h3>#{props.id.toString().padStart(3,"0")}</h3>
           <div className="flexitem">
           {props.types.map((types, index) =>  <p key={index}>{types.type.name}</p>)}
           </div>
