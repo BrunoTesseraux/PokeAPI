@@ -1,31 +1,43 @@
-article {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+@font-face {
+  font-family: "robo";
+  src: url(./../../assets/fonts/Roboto-Bold.ttf);
+}
 
-
-div:nth-of-type(1){
+.pokeitem {
+  margin-top: 100px;
+  flex: 1 1 100px;
+  max-width: 300px;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  position: relative;
+  .pokemon-link {
+    text-decoration: none;
+  }
+  img {
+    position: absolute;
+    bottom: 60px;
+    transform: translateX(10%);
+    width: 90%;
+  }
+  div {
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    p {
+      font-family: "robo";
+      font-size: 1.3rem;
+      text-decoration: none;
+      margin: 0;
+      color: yellow;
+      text-shadow: -1px -1px 3px blue, 1px -1px 3px blue, -1px 1px 3px blue,
+        1px 1px 3px blue;
+    }
+  }
 }
-}
-
-.flexitem {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flexitem p {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-
-
-
-
