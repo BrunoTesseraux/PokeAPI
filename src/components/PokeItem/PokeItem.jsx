@@ -7,7 +7,7 @@ const PokeItem = (props) => {
       <Link to={`./pokemon-details/${props.id}`} className="pokemon-link">
         <img src={props.img} alt={props.name} />
         <div>
-          <p># {props.id.toString().padStart(3, "0")}</p>
+          <p>#{props.id.toString().padStart(3, "0")}</p>
           <p>
             {props.name.charAt(0).toUpperCase() +
               props.name.slice(1).toLowerCase()}
