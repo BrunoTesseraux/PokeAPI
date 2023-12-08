@@ -1,11 +1,35 @@
-const DarkMode = ({ toggleDarkMode, isDarkMode }) => {
+import "./DarkMode.css";
+import "./DarkMode.scss";
+const DarkMode = () => {
+  const styleTarget = document.body;
+
+  const setDarkMode = () => {
+    styleTarget.classList.remove("dark-mode", "light-mode");
+    styleTarget.classList.add("dark-mode");
+  };
+  const setLightMode = () => {
+    styleTarget.classList.remove("dark-mode", "light-mode");
+    styleTarget.classList.add("light-mode");
+  };
+
+  const toggleDarkLight = (e) => {
+    if (e.target.checked) setDarkMode();
+    else setLightMode();
+  };
+  setLightMode();
   return (
-    <>
-      <div onClick={toggleDarkMode} style={{ cursor: "pointer" }}>
-        {isDarkMode ? "Nacht" : "Tag"}
-      </div>
-    </>
+    <div className="dark_mode">
+      <input
+        className="dark_mode_input"
+        type="checkbox"
+        id="darkmode-toggle"
+        onChange={toggleDarkLight}
+      />
+      <label className="dark_mode_label" for="darkmode-toggle">
+        {/* <Sun />
+        <Moon /> */}
+      </label>
+    </div>
   );
 };
-
 export default DarkMode;
