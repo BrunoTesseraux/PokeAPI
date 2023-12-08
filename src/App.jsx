@@ -12,7 +12,7 @@ import PokeGallery from "./components/PokeGallery/PokeGallery";
 
 function App() {
   const [pokedata, setPokedata] = useState([]);
-  const [resetData, setResetData] = useState([])
+  const [resetData, setResetData] = useState([]);
   const [pokedetaildata, setPokedetaildata] = useState([]);
 
   // console.log(searchInput);
@@ -28,10 +28,14 @@ function App() {
         <DataFetch />
         <Header />
         <Routes>
-          <Route path="/" element={ <Home />} />
-          <Route path="/types" element={ <Typefilter />} />
-          <Route path="/types/pokemon-gallery" element={ <PokeGallery/> } />
+          <Route path="/" element={<Home />} />
+          <Route path="/types" element={<Typefilter />} />
+          <Route path="/types/pokemon-gallery" element={<PokeGallery />} />
           <Route path="/pokemon-details/:id" element={<PokeDetails />} />
+          <Route
+            path="/types/pokemon-gallery/pokemon-details/:id"
+            element={<PokeDetails />}
+          />
         </Routes>
       </PokeDetailsContext.Provider>
     </FetchContext.Provider>

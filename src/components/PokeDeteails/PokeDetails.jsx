@@ -17,15 +17,21 @@ const PokeDetails = () => {
   console.log("single", singlePokemon[0]);
 
   return (
-    <article>
+    <article
+      className="pokemondetails
+    "
+    >
       <div className="h2-container">
-        <h2>#{singlePokemon[0].id.toString().padStart(3, "0")}</h2>
+        <h2 className="idk">
+          #{singlePokemon[0].id.toString().padStart(3, "0")}
+        </h2>
       </div>
       <img
+        className="detailblick"
         src={singlePokemon[0].sprites.other.home.front_default}
         alt={singlePokemon.name}
       />
-      <h1>
+      <h1 className="detailüberschrift">
         {singlePokemon[0].name.charAt(0).toUpperCase() +
           singlePokemon[0].name.slice(1).toLowerCase()}
       </h1>
