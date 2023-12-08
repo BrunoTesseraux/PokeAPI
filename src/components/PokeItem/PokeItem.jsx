@@ -1,8 +1,5 @@
-
-
-
 const PokeItem = (props) => {
-  console.log(props.types[0])
+  
   return (
 
         <article>
