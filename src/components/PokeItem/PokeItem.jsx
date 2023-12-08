@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import "./PokeItem.scss"
+import "./PokeItem.scss"  
 
 
 
 const PokeItem = (props) => {
   return (
+        
         <article>
+        <Link to={`./pokemon-details/${props.id}`}>
           <div>
         <img src={props.img} alt={props.name}/>
         </div>
@@ -16,7 +18,7 @@ const PokeItem = (props) => {
           {props.types.map((types, index) =>  <p key={index}>{types.type.name}</p>)}
           </div>
           </div>
-          <Link to="./pokemon-details"/>
+        </Link>
         </article>
   )
   ;
