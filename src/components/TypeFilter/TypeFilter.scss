@@ -15,217 +15,152 @@
     text-align: center;
     padding: 0 40px;
     max-width: 1200px;
+
     // display: grid;
     // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
     button {
       color: #fff;
+
       padding: 12px 24px;
       border-radius: 8px;
       text-transform: uppercase;
-      margin: 8px 8px;
+      margin: 8px 8px 8px 8px;
       border: none;
       font-weight: 600;
       display: inline;
       cursor: pointer;
+      transition: transform 0.2s ease-out;
     }
-  }
 
-  .variante-zwei {
-    margin: 40px;
-    text-align: center;
-    padding: 0 40px;
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-    option {
-      color: #fff;
-      padding: 12px 24px;
+    button:hover {
+      transform: scale(1.03);
       border-radius: 8px;
       text-transform: uppercase;
-      margin: 8px 8px;
-      border: none;
-      font-weight: 600;
       display: inline;
       cursor: pointer;
-      font-family: sans-serif;
+      box-shadow: 0px 2px 4px #0056eba0;
     }
   }
 
   .bug {
     background-color: #3bb900;
   }
-  .bug:focus {
-    border: solid 2px #ffcb05;
-    background-color: #3bb900c0;
-  }
-  .bug-selected {
-    border: solid 2px #ff0d05;
-    background-color: #3bb900c0;
-  }
 
   .dark {
     background-color: #1c1c1c;
-  }
-  .dark:focus {
-    border: solid 2px #ffcb05;
-    background-color: #1c1c1cc0;
-  }
-  .dark-selected {
-    border: solid 2px #ff0d05;
-    background-color: #1c1c1cc0;
   }
 
   .dragon {
     background-color: #00458a;
   }
-  .dragon:focus {
-    border: solid 2px #ffcb05;
-    background-color: #00458ac0;
-  }
 
   .electric {
     background-color: #ffe600;
-  }
-  .electric:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ffe600c0;
   }
 
   .fairy {
     background-color: #ffc2f9;
   }
-  .fairy:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ffc2f9c0;
-  }
 
   .fighting {
     background-color: #e40000;
-  }
-  .fighting:focus {
-    border: solid 2px #ffcb05;
-    background-color: #e40000c0;
   }
 
   .fire {
     background-color: #ff9900;
   }
-  .fire:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ff9900c0;
-  }
 
   .flying {
     background-color: #ccdadd;
-  }
-  .flying:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ccdaddc0;
   }
 
   .ghost {
     background-color: #5a1e64;
   }
-  .ghost:focus {
-    border: solid 2px #ffcb05;
-    background-color: #5a1e64c0;
-  }
 
   .grass {
     background-color: #57921c;
-  }
-  .grass:focus {
-    border: solid 2px #ffcb05;
-    background-color: #57921cc0;
   }
 
   .ground {
     background-color: #965a00;
   }
-  .ground:focus {
-    border: solid 2px #ffcb05;
-    background-color: #965a00c0;
-  }
 
   .ice {
     background-color: #6ad2ff;
-  }
-  .ice:focus {
-    border: solid 2px #ffcb05;
-    background-color: #6ad2ffc0;
   }
 
   .normal {
     background-color: #b3b3b3;
   }
-  .normal:focus {
-    border: solid 2px #ffcb05;
-    background-color: #b3b3b3c0;
-  }
 
   .plant {
     background-color: #70df00;
-  }
-  .plant:focus {
-    border: solid 2px #ffcb05;
-    background-color: #70df00c0;
   }
 
   .poison {
     background-color: #ab00ae;
   }
-  .poison:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ab00aec0;
-  }
 
   .psychic {
     background-color: #ff81f2;
-  }
-  .psychi:focus {
-    border: solid 2px #ffcb05;
-    background-color: #ff81f2c0;
   }
 
   .rock {
     background-color: #e1b237;
   }
-  .rock:focus {
-    border: solid 2px #ffcb05;
-    background-color: #e1b237c0;
-  }
 
   .shadow {
     background-color: #050370;
-  }
-  .shadow:focus {
-    border: solid 2px #ffcb05;
-    background-color: #050370c0;
   }
 
   .steel {
     background-color: #2a4950;
   }
-  .steel:focus {
-    border: solid 2px #ffcb05;
-    background-color: #2a4950c0;
-  }
 
   .unknown {
     background-color: #555555;
-  }
-  .unknown:focus {
-    border: solid 2px #ffcb05;
-    background-color: #555555c0;
   }
 
   .water {
     background-color: #00a0e4;
   }
-  .water:focus {
-    border: solid 2px #ffcb05;
-    background-color: #00a0e4c0;
+
+  .searchbutton {
+    margin-top: 24px;
+    background-color: #ffcb05;
+    border: solid 4px #2a75bb;
+    color: #3c5aa6;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 900;
+    padding: 12px 40px;
+    border-radius: 8px;
+    display: inline;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .resetbutton {
+    margin-top: 24px;
+    // background-color: #ffcb05;
+    border: solid 4px #2a75bb;
+    color: #3c5aa6;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 900;
+    padding: 12px 40px;
+    border-radius: 8px;
+    display: inline;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .resetbutton:hover {
+    transform: none;
+
+    box-shadow: 0px 0px 0px #0056eba0;
   }
 }
 
