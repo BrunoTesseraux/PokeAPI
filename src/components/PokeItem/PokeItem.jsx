@@ -3,7 +3,7 @@ import "./PokeItem.scss";
 
 const PokeItem = (props) => {
   return (
-    <article class="pokeitem">
+    <article className="pokeitem">
       <Link to={`./pokemon-details/${props.id}`} className="pokemon-link">
         <img src={props.img} alt={props.name} />
         <div>

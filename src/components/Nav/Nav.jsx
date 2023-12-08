@@ -1,7 +1,7 @@
 import DarkMode from "../DarkMode/DarkMode";
 import Searchbar from "../Searchbar/Searchbar";
 import { Link } from "react-router-dom";
-
+import "./Nav.scss";
 // const [isDarkMode, setIsDarkMode] = useState(true);
 
 // const toggleDarkMode = () => {
@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Searchbar />
-        <DarkMode />
-      </nav>
-    </div>
+    <nav>
+      <Link to="/types">
+        <img src="./types.svg"></img>
+      </Link>
+      <Searchbar />
+      <DarkMode />
+    </nav>
   );
 };
 

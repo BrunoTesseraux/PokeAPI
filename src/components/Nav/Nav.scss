@@ -1,8 +1,11 @@
 nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-filter-icon {
-  width: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 30px;
+  margin-top: 15px;
+  .searchbar {
+    width: 75%;
+    text-align: center;
+    border-radius: 25px;
+  }
 }
