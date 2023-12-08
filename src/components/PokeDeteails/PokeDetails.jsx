@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { PokeDetailsContext } from "../../context/Context"
 import { useParams } from "react-router-dom";
+import "./PokeDetails.scss"
 
 
 const PokeDetails = () => {
@@ -9,37 +10,37 @@ const detailsPageContext = useContext(PokeDetailsContext);
 const pokemon = useParams();
 const singlePokemonPath = pokemon.id;
 
-const filteredSinglePokemon = detailsPageContext.pokedetaildata.filter((item) => {
+const singlePokemon = detailsPageContext.pokedetaildata.filter((item) => {
 
   if(item.id.toString() === singlePokemonPath.toString()){
     console.log("item",item.name)
     return item
   }
 })
-  return (
-          <article>
-          {/* <img src={filteredSinglePokemon.sprites.other.home.front_default} alt={filteredSinglePokemon.name}/> */}
-          <h1>{filteredSinglePokemon.name}</h1>
-          <h2>{filteredSinglePokemon.id}</h2>
-          {/* <button></button>
-          <button></button>
-          <p>{details.height}</p>
-          <p>{details.weight}</p>
-          <p>{details.moves}</p>
-          <p>{details.stats}</p>
-          <p>{details.}</p>
+console.log("single",singlePokemon[0])
 
-          <div>
-          {details.stats.map((stats, index) =>  <p key={index}>{stats.base_stats.name}</p>)}
-          </div> */}
+return (
+          <article>
+          <img src={singlePokemon[0].sprites.other.home.front_default} alt={singlePokemon.name}/>
+          <h1>{singlePokemon[0].name.charAt(0).toUpperCase() + singlePokemon[0].name.slice(1).toLowerCase()}</h1>
+          <h2>#{singlePokemon[0].id.toString().padStart(3,"0")}</h2>
+            {singlePokemon[0].types.map((types, index) => <button key={index} className={`${types.type.name}`}>{types.type.name}</button>)}
+            <div className="flex">
+          <p>Height: {singlePokemon[0].height} In</p>
+          <p>Weight: {singlePokemon[0].weight} lb</p>
+           </div>
+          {singlePokemon[0].stats.map((stats, index, HP, Attack,Defense, Speed, Specialattck, Specialdefense) => 
+            <p key={index} className="stats"> {stats.stat.name.charAt(0).toUpperCase() + stats.stat.name.slice(1).toLowerCase()}
+            :{stats.base_stat} </p>
+          )}
+
         </article>
-        
-          
-        
+
+
+
         );
 };
 
 export default PokeDetails;
-
 
           
