@@ -55,6 +55,10 @@ const Typefilter = () => {
       </section>
     </>
   );
+  
+  return <>
+  
+  </>;
 };
 
 export default Typefilter;

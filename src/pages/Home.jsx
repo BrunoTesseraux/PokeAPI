@@ -1,5 +1,9 @@
+import Pokelist from "../components/PokeList/PokeList";
+
 const Home = () => {
-  return <></>;
+  return <section>
+        <Pokelist/>
+        </section>;
 };
 
 export default Home;
