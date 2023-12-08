@@ -22,9 +22,9 @@ function App() {
         <Header />
         <Pokelist />
         <Routes>
-          <Route path="/" element={ <Home/> }/>
-          <Route path="/types" element={ <Typefilter/> }/>
-          <Route path="/pokemon-details/:id" element={ <PokeDetails/> }/>
+          <Route path="/" element={<Home />} />
+          <Route path="/types" element={<Typefilter />} />
+          <Route path="/pokemon-details/:id" element={<PokeDetails />} />
         </Routes>
       </PokeDetailsContext.Provider>
     </FetchContext.Provider>
