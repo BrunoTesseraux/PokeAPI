@@ -4,9 +4,11 @@ import PokeItem from "../PokeItem/PokeItem";
 import "./PokeList.scss"
 
 
+
 const Pokelist = () => {
   const fetchedData = useContext(FetchContext);
   const pokeDetailsData = useContext(PokeDetailsContext);
+
 
   useEffect(() => {
     let array = [];
@@ -22,12 +24,14 @@ const Pokelist = () => {
       Promise.all(promises)
         .then(() => {
           pokeDetailsData.setPokedetaildata(array);
+          pokeDetailsData.setResetData(array); //RESET DATA FÜR BACK HOME BUTTON
         })
         .catch((error) => console.log("Error fetching data:", error));
     };
 
     fetchData();
   }, [fetchedData.pokedata, pokeDetailsData.setPokedetaildata]);
+
 
   return (
     <section className="grid">
@@ -48,4 +52,3 @@ const Pokelist = () => {
 };
 
 export default Pokelist;
-
