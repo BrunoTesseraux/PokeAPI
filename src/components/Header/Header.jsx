@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <Link>
+        <Link to="/">
           <img src="./../../../public/pocketmon.svg" alt="Logo Pocketmon" />
         </Link>
         <Nav />
