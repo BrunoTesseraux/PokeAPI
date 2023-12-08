@@ -82,18 +82,19 @@
   background-color: #00a0e4;
 }
 
-article {
+article.pokemondetails {
   border-radius: 32px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   padding: 40px;
   align-items: center;
-  img {
+  img.detailblick {
     width: 80%;
     margin-bottom: 40px;
   }
 
-  h1 {
+  h1.detailüberschrift {
     color: yellow;
     font-family: "robo";
     font-weight: 900;
@@ -108,7 +109,7 @@ article {
   display: flex;
   justify-content: flex-end;
 
-  h2 {
+  h2.idk {
     color: #fff;
     text-align: right;
     font-family: "robo";
@@ -130,7 +131,7 @@ button {
   transition: transform 0.2s ease-out;
 }
 
-article {
+article.pokemondetails {
   max-width: 1000px;
 }
 
