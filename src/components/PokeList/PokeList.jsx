@@ -1,7 +1,6 @@
 import { useEffect, useContext } from "react";
 import { FetchContext, PokeDetailsContext } from "../../context/Context";
 import PokeItem from "../PokeItem/PokeItem";
-import "./PokeList.scss"
 
 
 

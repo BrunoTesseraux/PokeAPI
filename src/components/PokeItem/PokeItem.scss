@@ -36,3 +36,15 @@
     }
   }
 }
+
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+body {
+  padding-top: 25px;
+  padding-inline: 3%;
+}
