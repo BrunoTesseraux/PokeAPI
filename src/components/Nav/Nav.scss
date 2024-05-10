@@ -1,9 +1,13 @@
 nav {
   display: flex;
+  height: 30px;
   justify-content: space-between;
   margin-inline: 30px;
   margin-top: 15px;
   margin-bottom: 2rem;
+  img{
+    height: 30px;
+  }
   .searchbar {
     width: 75%;
     text-align: center;
